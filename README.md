@@ -1,2 +1,2 @@
-# PCmanagement
+# pc-management
 PC管理
