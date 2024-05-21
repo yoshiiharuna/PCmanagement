@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PC管理画面</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="pc-list.css">
 </head>
 <body>
     <h1>PC管理画面</h1>
@@ -27,7 +27,7 @@
         <tbody>
             <?php
             // データベース接続
-            $pdo = new PDO('mysql:host=localhost;dbname=pc_management;charset=utf8', 'root', ' ');
+            $pdo = new PDO('mysql:host=localhost;dbname=pc_management;charset=utf8', 'root', '');
             $stmt = $pdo->query('SELECT * FROM pcs');
             foreach ($stmt as $row) {
                 echo '<tr>';
