@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ログイン</title>
+    <title>ユーザー登録</title>
 </head>
 <body>
-    <h2>ログイン</h2>
-    <form action="login.php" method="post">
+    <h2>ユーザー登録</h2>
+    <form action="register.php" method="post">
         <label for="email">メールアドレス:</label>
         <input type="email" id="email" name="email" required><br>
         <label for="password">パスワード:</label>
         <input type="password" id="password" name="password" required><br>
-        <input type="submit" value="ログイン">
+        <input type="submit" value="登録">
     </form>
 </body>
 </html>
 
 <?php
-session_start();
-
 try {
     // データベース接続
     $pdo = new PDO('mysql:host=localhost;dbname=pc_management;charset=utf8', 'root', '');
@@ -35,23 +33,16 @@ try {
             exit();
         }
 
-        // ユーザーの認証
-        $stmt = $pdo->prepare('SELECT * FROM users WHERE email = ?');
-        $stmt->execute([$email]);
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        // パスワードのハッシュ化
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        if ($user && password_verify($password, $user['password'])) {
-            // セッションにユーザー情報を保存
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['email'] = $user['email'];
-            
-            // pc-list.phpにリダイレクト
-            header('Location: pc-list.php');
-            exit();
-        } else {
-            echo "無効なメールアドレスまたはパスワードです。";
-        }
-    
+        // ユーザー情報のデータベースへの挿入
+        $stmt = $pdo->prepare('INSERT INTO users (email, password) VALUES (?, ?)');
+        $stmt->execute([$email, $hashedPassword]);
+
+        // ログインページにリダイレクト
+        header('Location: login.php');
+        exit();
     }
 } catch (PDOException $e) {
     echo "データベースエラー: " . $e->getMessage();
