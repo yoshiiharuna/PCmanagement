@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ログイン</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <h2>ログイン</h2>
-    <form action="login.php" method="post">
-        <label for="email">メールアドレス:</label>
-        <input type="email" id="email" name="email" required><br>
-        <label for="password">パスワード:</label>
-        <input type="password" id="password" name="password" required><br>
-        <input type="submit" value="ログイン">
-    </form>
+    <div class="form-container">
+        <h2>ログイン</h2>
+        <form action="login.php" method="post">
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="password">パスワード:</label>
+            <input type="password" id="password" name="password" required><br>
+            <input type="submit" value="ログイン">
+        </form>
+    </div>
 </body>
 </html>
+
 
 <?php
 session_start();

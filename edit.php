@@ -15,7 +15,7 @@ $pc = $stmt->fetch(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>編集</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="edit.css">
 </head>
 <body>
     <h1>編集</h1>

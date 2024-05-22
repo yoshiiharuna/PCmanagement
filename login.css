@@ -1,0 +1,67 @@
+/* login.css */
+
+/* ベースのスタイル */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* フォームコンテナ */
+.form-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    width: 320px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* フォームのタイトル */
+h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+}
+
+/* ラベル */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 入力フィールド */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* ボタン */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
