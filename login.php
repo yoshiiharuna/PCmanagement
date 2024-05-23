@@ -6,6 +6,7 @@
     <title>ログイン</title>
     <link rel="stylesheet" href="login-form.css">
 </head>
+
 <body>
     <div class="form-container">
         <h2>ログイン</h2>
@@ -15,8 +16,9 @@
             <label for="password">パスワード:</label>
             <input type="password" id="password" name="password" required><br>
             <input type="submit" value="ログイン">
+            <a href='register.php'>ユーザー登録はこちら</a>
         </form>
-    </div>
+    </div> 
 </body>
 </html>
 
