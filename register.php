@@ -6,15 +6,18 @@
     <title>ユーザー登録</title>
     <link rel="stylesheet" type="text/css" href="registrationForm.css">
 </head>
+
 <body>
-    <h2>ユーザー登録</h2>
-    <form action="register.php" method="post">
-        <label for="email">メールアドレス:</label>
-        <input type="email" id="email" name="email" required><br>
-        <label for="password">パスワード:</label>
-        <input type="password" id="password" name="password" required><br>
-        <input type="submit" value="登録">
-    </form>
+    <div class="form-container">
+        <h2>ユーザー登録</h2>
+        <form action="register.php" method="post">
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="password">パスワード:</label>
+            <input type="password" id="password" name="password" required><br>
+            <input type="submit" value="登録">
+        </form>
+    </div>
 </body>
 </html>
 
