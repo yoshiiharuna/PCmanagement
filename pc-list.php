@@ -46,5 +46,18 @@
             ?>
         </tbody>
     </table>
+  <!-- 削除ボタンをテーブルの外に配置 -->
+  <form method="POST" action="delete.php" id="deleteForm">
+        <label for="deleteId">削除するPCのID:</label>
+        <input type="text" name="id" id="deleteId" required>
+        <input type="submit" value="削除">
+    </form>
+
+    <!-- 削除ボタンをクリックしたときに、削除する行のIDを設定 -->
+    <script>
+        function setDeleteId(id) {
+            document.getElementById('deleteId').value = id;
+        }
+    </script>  
 </body>
 </html>
