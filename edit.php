@@ -18,8 +18,8 @@ $pc = $stmt->fetch(PDO::FETCH_ASSOC);
     <link rel="stylesheet" type="text/css" href="edit.css">
 </head>
 <body>
-    <h1>編集</h1>
     <form action="edit_process.php" method="post">
+        <h1>編集</h1>
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($pc['id']); ?>">
         
         <label for="pcid">PCID:</label>

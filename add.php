@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="form-add.css">
 </head>
 <body>
-    <h1>新規登録</h1>
     <form action="add_process.php" method="post">
+    <h1>新規登録</h1>
         <label for="pcid">PCID:</label>
         <input type="text" id="pcid" name="pcid" required><br>
         
