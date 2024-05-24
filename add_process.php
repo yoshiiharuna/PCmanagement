@@ -1,5 +1,5 @@
 <?php
-// データベース接続
+// データベース接続 
 $pdo = new PDO('mysql:host=localhost;dbname=pc_management;charset=utf8', 'root', '');
 
 // フォームデータを取得
@@ -8,7 +8,7 @@ $model = $_POST['model'];
 $os = $_POST['os'];
 $cpu = $_POST['cpu'];
 $memory = $_POST['memory'];
-$name = $_POST['name'];
+$name = $_POST['name']; 
 $storagerocation = $_POST['storagerocation'];
 $memo = $_POST['memo'];
 
