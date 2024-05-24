@@ -16,7 +16,7 @@
             <label for="password">パスワード:</label>
             <input type="password" id="password" name="password" required><br>
             <input type="submit" value="ログイン">
-            <a href='register.php'>ユーザー登録はこちら</a>
+            <a href='register.php' class="register-link">ユーザー登録はこちら</a>
         </form>
     </div> 
 </body>

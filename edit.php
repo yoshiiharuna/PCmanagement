@@ -7,6 +7,7 @@ $id = $_GET['id'];
 $stmt = $pdo->prepare('SELECT * FROM pcs WHERE id = ?');
 $stmt->execute([$id]);
 $pc = $stmt->fetch(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -48,5 +49,6 @@ $pc = $stmt->fetch(PDO::FETCH_ASSOC);
         
         <input type="submit" value="更新">
     </form>
+    
 </body>
 </html>
